@@ -6,6 +6,12 @@ class GitWorkflow < Formula
   license ""
   head "https://github.com/Khan/git-workflow.git"
 
+  bottle do
+    root_url "https://github.com/yogieric/homebrew-test2/releases/download/git-workflow-01"
+    sha256 cellar: :any_skip_relocation, catalina:     "1c43ba7e2286080a18c884ba239fe219a745b4e228bb8a0e42b615030b2fb153"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "624b60494f6b4aa3b6dae8e93ce3c79748ba295a0e5fdb46880ae84beb7f3974"
+  end
+
   def install
     # git-find-reviewers specifically requires python2
     inreplace "bin/git-find-reviewers" do |s|
