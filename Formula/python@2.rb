@@ -191,12 +191,15 @@ class PythonAT2 < Formula
     (libexec/"pip").install resource("pip")
     (libexec/"wheel").install resource("wheel")
 
-    {
-      "pydoc"         => "pydoc2",
-      "python"        => "python2",
-      "python-config" => "python2-config",
-    }.each do |unversioned_name, versioned_name|
-      (libexec/"bin").install_symlink (bin/versioned_name).realpath => unversioned_name
+    if OS.mac?
+      {
+        "idle"          => "idle2",
+        "pydoc"         => "pydoc2",
+        "python"        => "python2",
+        "python-config" => "python2-config",
+      }.each do |unversioned_name, versioned_name|
+        (libexec/"bin").install_symlink (bin/versioned_name).realpath => unversioned_name
+      end
     end
   end
 
