@@ -192,7 +192,6 @@ class PythonAT2 < Formula
     (libexec/"wheel").install resource("wheel")
 
     {
-      "idle"          => "idle2",
       "pydoc"         => "pydoc2",
       "python"        => "python2",
       "python-config" => "python2-config",
