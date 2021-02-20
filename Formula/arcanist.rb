@@ -6,6 +6,12 @@ class Arcanist < Formula
   license ""
   head "https://github.com/Khan/arcanist.git", revision: "dc258511e6082c3eb7c514b6f88c111b3f123195"
 
+  bottle do
+    root_url "https://github.com/yogieric/homebrew-test2/releases/download/arcanist-123195"
+    sha256 cellar: :any_skip_relocation, catalina:     "78f02ae592580ac525930b81e4568c46826e067dec8e6cec376057ff16b23944"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e41ddf7e7b9f5f6a5caf9618cb1a6c0bacf522b0eb4b66490bb46e29ea19e5bd"
+  end
+
   depends_on "php"
   depends_on "yogieric/test2/git-workflow"
 
