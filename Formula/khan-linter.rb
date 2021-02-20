@@ -6,6 +6,8 @@ class KhanLinter < Formula
   license ""
   head "https://github.com/Khan/khan-linter.git"
 
+  depends_on "libyaml"
+
   def install
     prefix.install Dir["*"]
 
