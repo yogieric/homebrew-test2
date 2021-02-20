@@ -23,7 +23,7 @@ class PythonAT2 < Formula
   depends_on "readline"
   depends_on "sqlite"
   unless OS.mac?
-    depends_on "linuxbrew/xorg/xorg"
+#    depends_on "linuxbrew/xorg/xorg"
     depends_on "bzip2"
     depends_on "ncurses"
     depends_on "zlib"
